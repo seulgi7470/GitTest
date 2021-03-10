@@ -1,0 +1,18 @@
+커밋된 파일 변경사항 ignore
+1. 원격저장소에서도 지우고 싶을 때
+    - 캐시파일 삭제 후  ignore 적용한다.
+.gitignore에 파일 추가
+git rm -r --cached .
+git add .
+git commit -m "Clear git cache"
+git push(push 안되더라.. tortoise에서 하기)
+
+2.  임시로 변경 사항 무시
+git update-index --assume-unchanged "파일이름"
+    - 변경사항 무시 해제
+git update-index --no-assume-unchanged "파일이름"
+
+깃에 적용되었는지 확인 법
+git ls-files -v
+H 변경사항 적용 파일
+h 변경사항 무시 파일
